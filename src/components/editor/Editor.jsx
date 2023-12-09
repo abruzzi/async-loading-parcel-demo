@@ -33,7 +33,17 @@ const Editor = () => {
           </li>
           <li></li>
           {enableAdvancedTools && (
-            <Suspense>
+            <Suspense
+              fallback={
+                <li>
+                  <button>
+                    <span className="material-symbols-outlined spinning">
+                      progress_activity
+                    </span>
+                  </button>
+                </li>
+              }
+            >
               <AsyncProTools />
             </Suspense>
           )}

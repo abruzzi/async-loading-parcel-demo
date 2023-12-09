@@ -16,7 +16,7 @@ const ProTools = () => {
           <span className="material-symbols-outlined">more_horiz</span>
         </Button>
         <Popover>
-          <Menu onAction={alert}>
+          <Menu onAction={x => console.log(x)}>
             <MenuItem id="open">Open</MenuItem>
             <MenuItem id="rename">Rename…</MenuItem>
             <MenuItem id="duplicate">Duplicate</MenuItem>
