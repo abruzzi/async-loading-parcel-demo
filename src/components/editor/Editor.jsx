@@ -2,6 +2,7 @@ import { AsyncProTools } from "../advanced/AsyncProTools";
 import { Suspense, useState } from "react";
 
 import "./Editor.css";
+import { ErrorBoundary } from "react-error-boundary";
 
 const Editor = () => {
   const [enableAdvancedTools, setAdvancedTools] = useState(false);
@@ -32,21 +33,33 @@ const Editor = () => {
             </button>
           </li>
           <li></li>
-          {enableAdvancedTools && (
-            <Suspense
-              fallback={
-                <li>
-                  <button>
-                    <span className="material-symbols-outlined spinning">
-                      progress_activity
-                    </span>
-                  </button>
-                </li>
-              }
-            >
-              <AsyncProTools />
-            </Suspense>
-          )}
+          <ErrorBoundary
+            fallback={
+              <li>
+                <button>
+                  <span className="material-symbols-outlined warning">
+                    warning
+                  </span>
+                </button>
+              </li>
+            }
+          >
+            {enableAdvancedTools && (
+              <Suspense
+                fallback={
+                  <li>
+                    <button>
+                      <span className="material-symbols-outlined spinning">
+                        progress_activity
+                      </span>
+                    </button>
+                  </li>
+                }
+              >
+                <AsyncProTools />
+              </Suspense>
+            )}
+          </ErrorBoundary>
         </ol>
       </nav>
       <label>

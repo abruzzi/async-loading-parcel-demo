@@ -59,3 +59,7 @@ label input {
 .spinning {
   animation: spin 1s linear infinite;
 }
+
+.warning {
+  color: #e23e57;
+}
