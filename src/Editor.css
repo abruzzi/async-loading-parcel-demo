@@ -1,0 +1,94 @@
+.editor-container {
+  margin: 4rem 0;
+}
+
+ol {
+  display: flex;
+  gap: 4px;
+}
+
+ol li {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 2px;
+}
+
+ol li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ol li button {
+  width: 2rem;
+  height: 2rem;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+}
+
+.content-container {
+  margin-block: 1rem;
+}
+
+textarea.content {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 2px;
+  border: 1px solid #f6f6f6;
+}
+
+/* menu */
+
+.react-aria-Menu {
+  background-color: white;
+  border: 1px solid #f6f6f6;
+  --highlight-background: #e23e57;
+  --highlight-foreground: white;
+  --separator-color: #f6f6f6;
+  --text-color: #666;
+
+  max-height: inherit;
+  box-sizing: border-box;
+  overflow: auto;
+  padding: 2px;
+  min-width: 150px;
+  outline: none;
+}
+
+.react-aria-MenuItem {
+  margin: 2px;
+  padding: 0.286rem 0.571rem;
+  border-radius: 6px;
+  outline: none;
+  cursor: default;
+  color: var(--text-color);
+  font-size: 1.072rem;
+  position: relative;
+  display: grid;
+  grid-template-areas: "label kbd"
+                      "desc  kbd";
+  align-items: center;
+  column-gap: 20px;
+
+  &[data-focused] {
+    background: var(--highlight-background);
+    color: var(--highlight-foreground);
+  }
+}
+
+@media (forced-colors: active) {
+  .react-aria-Menu {
+    forced-color-adjust: none;
+
+    --highlight-background: Highlight;
+    --highlight-foreground: HighlightText;
+    --separator-color: ButtonBorder;
+    --text-color: ButtonText;
+    --text-color-disabled: GrayText;
+  }
+}
+

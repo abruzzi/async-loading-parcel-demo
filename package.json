@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "parcel": "^2.10.3",
+    "process": "^0.11.10"
+  },
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-aria-components": "^1.0.0-rc.0"
+  },
+  "name": "async-loading-parcel",
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
