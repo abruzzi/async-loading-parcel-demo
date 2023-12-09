@@ -1,3 +1,5 @@
+import './ProTools.css';
+
 import {
   Button,
   Menu,
@@ -6,7 +8,7 @@ import {
   Popover,
 } from "react-aria-components";
 
-const MoreTools = () => {
+const ProTools = () => {
   return (
     <li>
       <MenuTrigger>
@@ -27,4 +29,4 @@ const MoreTools = () => {
   );
 };
 
-export default MoreTools;
+export default ProTools;

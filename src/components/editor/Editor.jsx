@@ -1,10 +1,10 @@
-import { AsyncMoreTools } from "./AsyncMoreTools";
-import { Suspense } from "react";
+import { AsyncProTools } from "../advanced/AsyncProTools";
+import { Suspense, useState } from "react";
 
 import "./Editor.css";
 
 const Editor = () => {
-  const advancedFeatureEnabled = false;
+  const [enableAdvancedTools, setAdvancedTools] = useState(false);
 
   return (
     <div className="editor-container">
@@ -32,13 +32,21 @@ const Editor = () => {
             </button>
           </li>
           <li></li>
-          {advancedFeatureEnabled && (
+          {enableAdvancedTools && (
             <Suspense>
-              <AsyncMoreTools />
+              <AsyncProTools />
             </Suspense>
           )}
         </ol>
       </nav>
+      <label>
+        <input
+          type="checkbox"
+          checked={enableAdvancedTools}
+          onChange={() => setAdvancedTools((x) => !x)}
+        />
+        <span>Enable Advanced Tools</span>
+      </label>
       <section className="content-container">
         <textarea
           className="content"

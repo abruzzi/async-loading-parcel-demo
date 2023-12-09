@@ -1,0 +1,47 @@
+.editor-container {
+  margin: 4rem 0;
+}
+
+ol {
+  display: flex;
+  gap: 4px;
+}
+
+ol li {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 2px;
+}
+
+ol li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ol li button {
+  width: 2rem;
+  height: 2rem;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+}
+
+textarea.content {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 2px;
+  border: 1px solid #f6f6f6;
+}
+
+label {
+  display: flex;
+  margin-block: 0.5rem;
+}
+
+label input {
+  margin-right: 4px;
+}
